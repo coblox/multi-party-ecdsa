@@ -52,7 +52,7 @@ use protocols::multi_party_ecdsa::gg_2018::mta::{MessageA, MessageB};
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct EcKeyPair {
     pub public_share: GE,
-    secret_share: FE,
+    pub secret_share: FE,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
@@ -77,16 +77,16 @@ pub struct PartialSig {
 
 #[derive(Serialize, Deserialize)]
 pub struct Party2Private {
-    x2: FE,
+    pub x2: FE,
 }
 #[derive(Debug)]
 pub struct PDLchallenge {
     pub c_tag: BigInt,
     pub c_tag_tag: BigInt,
-    a: BigInt,
-    b: BigInt,
-    blindness: BigInt,
-    q_tag: GE,
+    pub a: BigInt,
+    pub b: BigInt,
+    pub blindness: BigInt,
+    pub q_tag: GE,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -109,7 +109,7 @@ pub struct PDLSecondMessage {
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct EphEcKeyPair {
     pub public_share: GE,
-    secret_share: FE,
+    pub secret_share: FE,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]

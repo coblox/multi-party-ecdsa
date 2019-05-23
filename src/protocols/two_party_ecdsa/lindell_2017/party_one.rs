@@ -53,7 +53,7 @@ use subtle::ConstantTimeEq;
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct EcKeyPair {
     pub public_share: GE,
-    secret_share: FE,
+    pub secret_share: FE,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
@@ -78,9 +78,9 @@ pub struct KeyGenSecondMsg {
 #[derive(Debug, Serialize, Deserialize)]
 pub struct PaillierKeyPair {
     pub ek: EncryptionKey,
-    dk: DecryptionKey,
+    pub dk: DecryptionKey,
     pub encrypted_share: BigInt,
-    randomness: BigInt,
+    pub randomness: BigInt,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -98,9 +98,9 @@ pub struct Signature {
 
 #[derive(Serialize, Deserialize, Clone)]
 pub struct Party1Private {
-    x1: FE,
-    paillier_priv: DecryptionKey,
-    c_key_randomness: BigInt,
+    pub x1: FE,
+    pub paillier_priv: DecryptionKey,
+    pub c_key_randomness: BigInt,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -122,7 +122,7 @@ pub struct PDLSecondMessage {
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct EphEcKeyPair {
     pub public_share: GE,
-    secret_share: FE,
+    pub secret_share: FE,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
